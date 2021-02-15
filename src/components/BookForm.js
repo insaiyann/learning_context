@@ -13,6 +13,8 @@ const BookForm = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (!title || !author)
+            return;
         dispatch({
             type: 'ADD_BOOK',
             book: { title, author }
