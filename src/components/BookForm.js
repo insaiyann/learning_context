@@ -13,7 +13,7 @@ const BookForm = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (!title || !author)
+        if (!title.trim().length || !author.trim().length)
             return;
         dispatch({
             type: 'ADD_BOOK',
